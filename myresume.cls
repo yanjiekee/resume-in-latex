@@ -25,15 +25,15 @@
 % Setting up the layout of document
 \geometry{a4paper,
 ignoreheadfoot,
-hscale=0.7, vscale=0.8,
+hscale=0.72, vscale=0.82,
 hcentering, vcentering,}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10pt}
-\renewcommand{\baselinestretch}{.9}
+% \renewcommand{\baselinestretch}{.9}
 
 % Font customising
-\renewcommand{\normalfont}{\fontsize{8pt}{9pt}}
-\newcommand{\largefont}{\fontsize{9pt}{10pt}}
+\renewcommand{\normalfont}{\fontsize{10pt}{12pt}}
+\newcommand{\largefont}{\fontsize{12pt}{14pt}}
 
 % Numbering (diasabled)
 \setcounter{secnumdepth}{0}
@@ -89,18 +89,19 @@ hcentering, vcentering,}
 \newcommand{\tabitem}{\hspace{2ex}$\bullet$\hspace{1.3ex}} % Allow use of list inside table
 
 \newcommand{\cvEntry}[4]
-{\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
-%\setlength{\leftmargin{3ex}}%
+{\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}%
+% @{\extracolsep{\fill}}
+% \setlength{\leftmargin{3ex}}%
 \TitleStyle{#1}&\DateStyle{#2}\\
 \multicolumn{2}{l@{\extracolsep{\fill}}}{\PositionStyle{#3}}%
 \end{tabular*}%
-\begin{cvItems}\newline\DescriptionStyle{#4}\end{cvItems}}
+\begin{cvItems}\newline\DescriptionStyle{#4}\end{cvItems}\vspace{1.5ex}}
 
 \newcommand{\cvEntryTwo}[3]
-{\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+{\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}%
 \TitleStyle{#1}&\DateStyle{#2}\\
 \end{tabular*}%
-\begin{cvItems}\newline\DescriptionStyle{#3}\end{cvItems}}
+\begin{cvItems}\newline\DescriptionStyle{#3}\end{cvItems}\vspace{1.5ex}}
 
 \newenvironment{cvItems}
 {\RaggedRight\setlength{\parskip}{2pt}}
