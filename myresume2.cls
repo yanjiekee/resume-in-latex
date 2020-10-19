@@ -39,7 +39,7 @@
 % Geometry of the paper size and text size:
 % Size of A4 is 8.27 × 11.69 inches
 \geometry{a4paper,
-total = {6.5in, 9in}}
+total = {6.5in, 10in}}
 \setlength{\parindent}{0pt}
 
 % Redefine the font size:
@@ -91,6 +91,9 @@ total = {6.5in, 9in}}
 % Help setting up tabularx
 % \tracingtabularx
 
+\newcommand{\paragraphEntry}[1]
+{\ParagraphStyle#1}
+
 \newcommand{\twocolumnEntry}[2]
 {\setlength{\tabcolsep}{0pt}% Such that the width of the table for \smallheadEntry can be determined correctly in \projectEntry
 \begin{tabularx}{\textwidth}
@@ -100,6 +103,7 @@ total = {6.5in, 9in}}
   @{}}
 \textStyle{\textit{#1}}&\textStyle{#2}\\
 \end{tabularx}\vspace{2pt}}
+
 
 
 \newcommand{\headEntry}[4]
